@@ -13,17 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route ::view("/usuario","usuario");
+
+
 
 Route::get('/', function () {
-    $productos = [
-        ["nombre"=>"pelota","categoria"=>"juguete"],
-        ["nombre"=>"max","categoria"=>"comida"],
-        ["nombre"=>"provet","categoria"=>"medicamento"],
-        ["nombre"=>"fiplo","categoria"=>"comida"],
-        ["nombre"=>"cepillo","categoria"=>"aseo"],
-        ["nombre"=>"pollo plastico","categoria"=>"juguete"],
-        
+    $sedes = [
+        ["nombre"=>"Bogota  ","Direccion"=>"calle 30# 25-75"],
+        ["nombre"=>"Cali  ","Direccion"=>"calle 100 #45-25"],
+        ["nombre"=>"Medellin  ","Direccion"=>"Carrera 15 ##15-89"],
     ];
     $usuario="Milena";
-    return view('welcome',["productos"=>$productos],["usuario"=>$usuario]);
+    return view('sedes',["productos"=>$sedes],["usuario"=>$usuario]);
 });
+
+
+

@@ -11,13 +11,13 @@
     {{-- navbar --}}
     @include("layouts.navbar")
     <div class="text-end text-sm text-green-800 mx-4">
-        Bienvenido{{ $usuario}}!
-</div>
-
-
+        Bienvenido
 </header>
 <main>
-    @yield("contenido")
+     <div class="bg-green-100 my-4 text=center">
+         <h1 class="text-lg font-semibold m-4 uppercase">@yield("cabecera")</h1>
+     </div >
+     @yield("contenido")
 </main>
 <footer class="footer bg-neutral text-neutral-content p-10">
   <aside>
